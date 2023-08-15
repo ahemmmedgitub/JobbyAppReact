@@ -1,0 +1,14 @@
+.type-employment {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.label-element {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+.checkBox {
+  margin-right: 20px;
+}

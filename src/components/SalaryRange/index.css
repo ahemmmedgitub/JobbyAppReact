@@ -3,7 +3,7 @@
   flex-direction: row;
   margin-bottom: 20px;
 }
-.label-element {
+.salary-label-element {
   font-size: 14px;
   font-weight: 500;
   font-family: 'Roboto';
@@ -11,4 +11,17 @@
 }
 .salary-id {
   margin-right: 20px;
+}
+@media (max-width: 576px) {
+  .salary-label-element {
+    font-size: 12px;
+    margin-left: 0px;
+  }
+  .salary-id {
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+  .salary-employment {
+    width: 150px;
+  }
 }

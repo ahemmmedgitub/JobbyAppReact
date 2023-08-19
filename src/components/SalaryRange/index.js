@@ -10,12 +10,14 @@ const SalaryRange = props => {
 
   return (
     <li className="salary-employment">
-      <input className="salary-id" type="radio" id={salaryRangeId} />
-      <label
-        className="label-element"
-        htmlFor={salaryRangeId}
+      <input
+        value={salaryRangeId}
+        className="salary-id"
+        type="radio"
+        id={salaryRangeId}
         onClick={sendSalaryId}
-      >
+      />
+      <label className="salary-label-element" htmlFor={salaryRangeId}>
         {label}
       </label>
     </li>

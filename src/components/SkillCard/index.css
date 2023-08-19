@@ -15,3 +15,17 @@
   font-weight: 500;
   font-family: 'Roboto';
 }
+@media (max-width: 576px) {
+  .skill-card-container {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .skill-logo {
+    margin-right: 20px;
+    width: 40px;
+  }
+  .skill-name {
+    font-size: 14px;
+  }
+}

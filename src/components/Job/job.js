@@ -91,6 +91,10 @@ class Jobs extends Component {
     this.setState({inputSearch: takingSearchInput}, this.getJobDetails)
   }
 
+  unSuccessJobApi = () => {
+    this.getJobDetails()
+  }
+
   getJobDetails = async () => {
     const {employmentType, salaryRange, inputSearch} = this.state
 
@@ -176,7 +180,7 @@ class Jobs extends Component {
 
     return (
       <div className="profile-container">
-        <img src={profileImageUrl} alt="profile" className="user-img" />
+        <img src={profileImageUrl} alt={name} className="user-img" />
         <h1 className="user-name">{name}</h1>
         <p className="user-bio">{shortBio}</p>
       </div>
@@ -203,22 +207,23 @@ class Jobs extends Component {
   }
 
   onFailureJobApiSubmit = () => (
-    <div className="job-item-details-container">
-      <Header />
-      <div className="job-details-container">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
-          alt="failure view"
-          className="failure-img"
-        />
-        <h1 className="failure-heading">Opps! Something Went Wrong</h1>
-        <p className="description">
-          We cannot see to find the page your are looking for.
-        </p>
-        <button type="button" className="retry-btn">
-          Retry
-        </button>
-      </div>
+    <div className="failure-container">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
+        alt="failure view"
+        className="failure-img"
+      />
+      <h1 className="failure">Opps! Something Went Wrong</h1>
+      <p className="description">
+        We cannot see to find the page your are looking for.
+      </p>
+      <button
+        onClick={this.unSuccessJobApi}
+        type="button"
+        className="retry-btn"
+      >
+        Retry
+      </button>
     </div>
   )
 
@@ -297,7 +302,6 @@ class Jobs extends Component {
 
   render() {
     const {jobApiStatues} = this.state
-    console.log(jobApiStatues)
 
     return (
       <div className="job-main-container">

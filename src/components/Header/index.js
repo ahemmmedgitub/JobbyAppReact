@@ -52,14 +52,25 @@ const Header = props => {
           className="web-logo"
         />
         <ul className="icons-container">
+          <Link to="/" className="link-elements">
+            <li className="link-elements">
+              <AiOutlineHome className="log-out-icon home" />
+            </li>
+          </Link>
+          <Link to="/jobs" className="link-elements">
+            <li className="link-elements">
+              <RiHandbagLine className="log-out-icon home" />
+            </li>
+          </Link>
+
           <li className="link-elements">
-            <AiOutlineHome className="log-out-icon home" />
-          </li>
-          <li className="link-elements">
-            <RiHandbagLine className="log-out-icon home" />
-          </li>
-          <li className="link-elements">
-            <IoIosLogOut className="log-out-icon" />
+            <button
+              className="mobile-log-out-btn"
+              type="button"
+              onClick={onClickLogoutBtn}
+            >
+              <IoIosLogOut className="log-out-icon" />
+            </button>
           </li>
         </ul>
       </div>

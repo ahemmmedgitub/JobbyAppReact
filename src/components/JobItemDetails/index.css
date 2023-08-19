@@ -205,3 +205,22 @@
   align-items: center;
   min-height: 80vh;
 }
+
+@media (max-width: 576px) {
+  .skills {
+    font-size: 18px;
+  }
+  .company-description {
+    font-size: 12px;
+  }
+  .life-at-company-img {
+    width: 160px;
+    height: 160px;
+    margin-left: 20px;
+  }
+  .life-at-company-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

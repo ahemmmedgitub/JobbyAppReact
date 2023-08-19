@@ -12,3 +12,11 @@
 .checkBox {
   margin-right: 20px;
 }
+@media (max-width: 576px) {
+  .label-element {
+    font-size: 12px;
+  }
+  .checkBox {
+    margin-right: 10px;
+  }
+}
